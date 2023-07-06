@@ -1,0 +1,58 @@
+{
+  "name": "ledger-secret-js",
+  "version": "0.0.1",
+  "description": "Drop-in replacement for ledger-cosmos-js",
+  "keywords": [
+    "secretjs",
+    "ledger",
+    "secret-network"
+  ],
+  "repository": "github:SolarRepublic/ledger-secret-js",
+  "license": "ISC",
+  "author": {
+    "name": "Blake Regalia",
+    "email": "blake.regalia@gmail.com",
+    "url": "https://blake-regalia.com/"
+  },
+  "type": "commonjs",
+  "main": "dist/cjs/main.js",
+  "module": "dist/mjs/main.js",
+  "types": "dist/mjs/main.d.ts",
+  "exports": {
+    "require": "./dist/cjs/main.js",
+    "import": "./dist/mjs/main.js"
+  },
+  "files": [
+    "dist/cjs",
+    "dist/mjs"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .ts .",
+    "build:mjs": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "yarn build:mjs && yarn build:cjs"
+  },
+  "devDependencies": {
+    "@blake.regalia/eslint-config-elite": "^0.2.10",
+    "@blake.regalia/tsconfig": "^0.1.2",
+    "@ledgerhq/hw-transport": "^6.28.5",
+    "@types/node": "^20.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-plugin-i": "^2.27.5",
+    "eslint-plugin-modules-newline": "^0.0.6",
+    "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
+    "ts-toolbelt": "^9.6.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@blake.regalia/belt": "^0.15.0",
+    "@zondax/ledger-cosmos-js": "^3.0.2",
+    "ledger-cosmos-js": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

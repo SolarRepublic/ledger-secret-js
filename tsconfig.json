@@ -1,0 +1,18 @@
+{
+	"extends": "@blake.regalia/tsconfig/tsconfig.node.json",
+
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "dist/mjs",
+
+		"declaration": true,
+		"declarationDir": "dist/mjs",
+
+		"noUncheckedIndexedAccess": true,
+		"noPropertyAccessFromIndexSignature": false
+	},
+
+	"include": [
+		"src/**/*.ts",
+	]
+}
